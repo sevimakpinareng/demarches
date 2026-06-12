@@ -1,0 +1,16 @@
+Bu klasör manuel olarak eklenen belgeler içindir.
+
+Bir kaynak otomatik çekmeye kapalıysa (robots.txt, JavaScript gerektiriyorsa
+veya oturum açma istiyorsa), şu adımları izle:
+
+1. Resmi sayfayı tarayıcında aç
+2. Sayfanın metnini kopyala (Ctrl+A, Ctrl+C)
+3. Bu klasörde yeni bir .txt dosyası oluştur:
+   Dosya adı → topics.json'daki "id" alanıyla birebir aynı olmalı
+   Örnek: cvec.txt, titre-sejour-etudiant.txt
+
+4. Metni dosyaya yapıştır ve kaydet
+5. fetch.py otomatik olarak bu dosyayı okuyacak
+
+NOT: Telif hakkı olan metinleri kopyalama. Etalab/Licence Ouverte
+kapsamındaki Fransız kamu verisini tercih et.
