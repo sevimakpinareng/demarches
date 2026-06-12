@@ -78,11 +78,25 @@ def clean_html(html: str) -> tuple[str, str]:
     # Sayfa başlığı
     title = soup.title.get_text(strip=True) if soup.title else ""
 
-    # Gereksiz elementleri tamamen kaldır
+    # Yapısal gürültüyü kaldır (etiket bazlı)
     for tag in soup(["script", "style", "nav", "header", "footer",
                      "aside", "form", "button", "iframe", "noscript",
-                     "svg", "img"]):
+                     "svg", "img", "picture"]):
         tag.decompose()
+
+    # UI widget'larını class/role bazlı kaldır (paylaşım, abonelik, çerez vb.)
+    _NOISE_PATTERNS = [
+        {"role": "complementary"}, {"role": "navigation"}, {"role": "search"},
+        {"aria-hidden": "true"},
+    ]
+    _NOISE_CLASSES = ("share", "social", "favorite", "alert", "cookie",
+                      "breadcrumb", "pagination", "sidebar", "banner")
+    for pattern in _NOISE_PATTERNS:
+        for tag in soup.find_all(**pattern):
+            tag.decompose()
+    for cls in _NOISE_CLASSES:
+        for tag in soup.find_all(class_=lambda c: c and cls in c.lower()):
+            tag.decompose()
 
     # Ana içerik alanını bul (sırayla dene)
     content_node = None
@@ -93,10 +107,10 @@ def clean_html(html: str) -> tuple[str, str]:
     if content_node is None:
         content_node = soup.body or soup
 
-    # Düz metni çıkar, boş satırları temizle
+    # Düz metni çıkar; 3 karakterden kısa satırlar UI kalıntısıdır, atla
     raw_text = content_node.get_text(separator="\n")
     lines = [line.strip() for line in raw_text.splitlines()]
-    text = "\n".join(line for line in lines if line)
+    text = "\n".join(line for line in lines if len(line) >= 3)
 
     return text, title
 
