@@ -1,0 +1,86 @@
+{
+  "version": "1.0",
+  "description": "Fransa'daki idari konular ve resmi kaynak URL'leri. 30-50 konuya genişletilecek.",
+  "topics": [
+    {
+      "id": "titre-sejour-etudiant",
+      "name": "Titre de séjour étudiant",
+      "category": "immigration",
+      "source_url": "https://www.service-public.fr/particuliers/vosdroits/F16135",
+      "description": "Öğrenci oturma izninin başvurusu, yenilenmesi ve gereklilikleri",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "titre-sejour-salarie",
+      "name": "Titre de séjour salarié",
+      "category": "immigration",
+      "source_url": "https://www.service-public.fr/particuliers/vosdroits/F15401",
+      "description": "Çalışma iznini de kapsayan oturma izni (carte de séjour salarié)",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "renouvellement-titre-sejour",
+      "name": "Renouvellement du titre de séjour",
+      "category": "immigration",
+      "source_url": "https://www.service-public.fr/particuliers/vosdroits/F16134",
+      "description": "Oturma izninin yenilenmesi için prosedür ve gerekli belgeler",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "securite-sociale-affiliation",
+      "name": "Affiliation à la Sécurité sociale",
+      "category": "sante",
+      "source_url": "https://www.ameli.fr/assure/droits-demarches/etudes-emploi-retraite/etudiant",
+      "description": "Öğrencilerin ve yeni gelenlerin sosyal güvenliğe kaydı",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "carte-vitale",
+      "name": "Carte Vitale",
+      "category": "sante",
+      "source_url": "https://www.ameli.fr/assure/droits-demarches/vie-professionnelle-retraite/carte-vitale",
+      "description": "Carte Vitale başvurusu, kaybedilmesi veya güncellenmesi",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "caf-apl",
+      "name": "CAF – Aide Personnalisée au Logement (APL)",
+      "category": "logement",
+      "source_url": "https://www.service-public.fr/particuliers/vosdroits/F12006",
+      "description": "Kira yardımı (APL) başvurusu ve koşulları",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "cvec",
+      "name": "CVEC – Contribution Vie Étudiante et de Campus",
+      "category": "etudes",
+      "source_url": "https://cvec.etudiant.gouv.fr",
+      "description": "Üniversite kaydı için zorunlu öğrenci kampüs katkı payı ödemesi",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "ouverture-compte-bancaire",
+      "name": "Ouverture d'un compte bancaire en France",
+      "category": "finance",
+      "source_url": "https://www.service-public.fr/particuliers/vosdroits/F2909",
+      "description": "Banka hesabı açmak için gerekli belgeler ve RIB alma süreci",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "mutuelle-complementaire",
+      "name": "Mutuelle et complémentaire santé",
+      "category": "sante",
+      "source_url": "https://www.service-public.fr/particuliers/vosdroits/F20314",
+      "description": "Ek sağlık sigortası (mutuelle) seçimi ve öğrenciler için ücretsiz CSS",
+      "fetch_mode": "auto"
+    },
+    {
+      "id": "reconnaissance-diplome-etranger",
+      "name": "Reconnaissance d'un diplôme étranger",
+      "category": "etudes",
+      "source_url": "https://www.service-public.fr/particuliers/vosdroits/F1436",
+      "description": "Yabancı diplomanın Fransa'da tanınması için başvuru prosedürü",
+      "fetch_mode": "auto"
+    }
+  ]
+}
