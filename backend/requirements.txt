@@ -1,0 +1,22 @@
+# Web framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# HTTP & HTML parsing (ingestion)
+httpx==0.28.0
+beautifulsoup4==4.12.3
+lxml==5.3.0
+
+# Data validation
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# Database
+psycopg2-binary==2.9.10
+
+# Vector database
+qdrant-client==1.12.1
+
+# Utilities
+python-dotenv==1.0.1
+tenacity==9.0.0
